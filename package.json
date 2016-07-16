@@ -1,7 +1,7 @@
 {
   "name": "bernie-service",
   "version": "0.0.1",
-  "description": "Bernie is a bike theft tracker based on the blockchain,",
+  "description": "Bernie is a bike theft tracker based on the blockchain.",
   "main": "service.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
