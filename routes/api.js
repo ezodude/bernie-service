@@ -9,6 +9,21 @@ const health = function(request, reply){
   }).code(200);
 };
 
+const bikeStatus = function(request, reply){
+  reply(null, {
+    id: request.params.bikeId,
+    status: "stolen"
+  }).code(200);
+};
+
+const theftNotification = function(request, reply){
+  console.log('Params', request.params);
+  reply(null, {
+    id: request.params.bikeId,
+    sent: moment().utc().toISOString()
+  }).code(201);
+};
+
 module.exports = [
   {
     method: 'GET',
@@ -17,6 +32,24 @@ module.exports = [
     config: {
       description: 'Gives API status',
       tags: ['api', 'health']
+    }
+  },
+  {
+    method: 'GET',
+    path:'/api/v1/bike/{bikeId}/status',
+    handler: bikeStatus,
+    config: {
+      description: 'Gives API status',
+      tags: ['api', 'bikeStatus']
+    }
+  },
+  {
+    method: 'POST',
+    path:'/api/v1/bike/{bikeId}/theft/notification',
+    handler: theftNotification,
+    config: {
+      description: 'Gives API status',
+      tags: ['api', 'bikeStatus']
     }
   }
 ];
