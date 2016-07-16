@@ -1,0 +1,30 @@
+{
+  "name": "bernie-service",
+  "version": "0.0.1",
+  "description": "Bernie is a bike theft tracker based on the blockchain,",
+  "main": "service.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "bike",
+    "blockchain",
+    "etherium",
+    "truffle"
+  ],
+  "dependencies": {
+    "good": "^6.4.0",
+    "good-console": "^5.2.0",
+    "hapi": "^12.1.0",
+    "hapi-cors": "^1.0.1",
+    "lodash": "^4.3.0",
+    "moment": "^2.13.0"
+  },
+  "author": "Ezo Saleh <npm@ezosaleh.com> (http://ezosaleh.com/)",
+  "license": "MIT",
+  "engines": {
+    "node": "4.4.7",
+    "npm": "2.14.12"
+  }
+}
