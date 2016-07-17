@@ -12,7 +12,7 @@ const health = function(request, reply){
 const bikeStatus = function(request, reply){
   reply(null, {
     id: request.params.bikeId,
-    status: "stolen"
+    stolen: true
   }).code(200);
 };
 
@@ -20,7 +20,8 @@ const theftNotification = function(request, reply){
   console.log('Params', request.params);
   reply(null, {
     id: request.params.bikeId,
-    sent: moment().utc().toISOString()
+    notified_at: moment().utc().toISOString(),
+    owner: 'Owner Human'
   }).code(201);
 };
 
