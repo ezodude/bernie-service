@@ -19,7 +19,8 @@
     "hapi": "^12.1.0",
     "hapi-cors": "^1.0.1",
     "lodash": "^4.3.0",
-    "moment": "^2.13.0"
+    "moment": "^2.13.0",
+    "twilio": "^2.9.1"
   },
   "author": "Ezo Saleh <npm@ezosaleh.com> (http://ezosaleh.com/)",
   "license": "MIT",
