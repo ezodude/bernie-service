@@ -24,7 +24,7 @@ The response either stolen ```true``` or ```false```. E.g.
 Report theft, you need to supply the bike's frame Id and GPS coordinates for last seen location.
 
 ```
-curl -i -X POST https://bernie-my-bike.herokuapp.com/api/v1/bike/1223/theft/notification -d '{"lat": "38.9419", "long": "78.3020"}'
+curl -i -X POST -H "Content-Type: application/json" https://bernie-my-bike.herokuapp.com/api/v1/bike/STL-1223/theft/notification -d '{"lat": "51.52260", "long": "-0.08552"}'
 ```
 
 Here's the reponse. It includes the owner's name,
@@ -40,7 +40,7 @@ Here's the reponse. It includes the owner's name,
 This sends an SMS to the owners mobile with a google map's link. Here's an example link:
 
 ```
-http://maps.google.com/maps?z=12&t=m&q=loc:38.9419+-78.3020
+http://maps.google.com/maps?z=12&t=m&q=loc:51.52260+-0.08552
 ```
 
 * z is the zoom level (1-20)
