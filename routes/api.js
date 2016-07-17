@@ -2,6 +2,8 @@
 
 const moment = require('moment');
 
+const STOLEN_PREFIX = "stl";
+
 const health = function(request, reply){
   reply(null, {
     status: 'ok',
@@ -10,14 +12,15 @@ const health = function(request, reply){
 };
 
 const bikeStatus = function(request, reply){
+  const isStolen = request.params.bikeId.toLowerCase().startsWith(STOLEN_PREFIX);
+
   reply(null, {
     id: request.params.bikeId,
-    stolen: true
+    stolen: isStolen
   }).code(200);
 };
 
 const theftNotification = function(request, reply){
-  console.log('Params', request.params);
   reply(null, {
     id: request.params.bikeId,
     notified_at: moment().utc().toISOString(),
