@@ -1,6 +1,6 @@
 'use strict';
 
-const moment   = require('moment');
+const moment = require('moment');
 
 const health = function(request, reply){
   reply(null, {
